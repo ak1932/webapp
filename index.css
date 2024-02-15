@@ -1,0 +1,132 @@
+:root {
+    --chosen-color: #ffffff;
+    --knob: 200px;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  color: white;
+}
+
+body {
+  display: flex;
+  background: #202020;
+  font-size: 1.5rem;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+main {
+  color: #fff6d5;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.dot {
+  height: 3px;
+  width:3px;
+  border-radius: 50%;
+  background-color: var(--chosen-color);
+  position:absolute;
+}
+
+.dot_space {
+  position: absolute;
+  height: var(--knob);
+  width:2px;
+}
+
+.section {
+    border-radius: 10px;
+    margin:0px 50px 50px 50px;
+    padding:20px;
+    background-color:#303030;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 40px;
+}
+
+.knob {
+    padding: 10px;
+    position: relative;
+    height:var(--knob);
+    width:var(--knob);
+    border-radius: 50%;
+    grid-row: 1/4;
+    grid-column: 1;
+    justify-content: center;
+    display: flex;
+    background-color: #373737;
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+.current_value {
+    position: absolute;
+    text-shadow: 3px 3px 1px black;
+    font-size: 50px;
+    align-self:center;
+    color: var(--chosen-color);
+}
+
+.detent_picker {
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+    grid-row:2;
+    grid-column: 2;
+    padding: 20px;
+    background-color: #373737;
+    border-radius: 10px;
+}
+.detent_label {
+    font-size:20px;
+}
+
+.color_label {
+    font-size: 20px;
+}
+.color_picker {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    display:flex;
+    grid-row:2;
+    grid-column: 3;
+    padding: 20px;
+    background-color: #373737;
+    border-radius: 10px;
+}
+
+.color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#main_heading {
+    margin: 20px;
+    text-align: center;
+}
+
+.name_picker {
+    grid-row: 2;
+    grid-column: 4/6;
+    width: calc(var(--knob)+100px);
+    display:flex;
+    align-items: center;
+}
+
+.name {
+    font-size: 50px;
+    background-color:inherit;
+    border:none;
+    color:var(--chosen-color);
+}
+.name:focus {
+    outline:none;
+}
